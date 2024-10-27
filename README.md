@@ -14,7 +14,7 @@ Ethan Dam
 
 FleetExhibit Logo was created by me using Iconify in Figma Desgin.
 
-All Images used in this project are not owned by me and are for educational purposes only. Additionally, the external links provided are for informational purposes only; they do not belong to us, and we do not endorse or control the content of these external sites. Sources are porvided below for all of the Images:
+All Images used in this project are not owned by me and are for educational purposes only. Additionally, the external links provided are for informational purposes only; they do not belong to me, and I do not endorse or control the content of these external sites. Sources are porvided below for all of the Images:
 
 ### KMS - Kriegsmarine Schiff:
 
