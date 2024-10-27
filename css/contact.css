@@ -58,10 +58,10 @@ label {
 }
 
 .h1 {
-  font-size: x-large;
-  font-weight: bold;
+  font-size: x-large; /* text size */
+  font-weight: bold; /* text bold */
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 20px;
+  padding: 20px; /* Space inside of H1 heading */
   display: flex;
   justify-content: center;
 }
@@ -72,6 +72,7 @@ label {
   color: #60a5fa; /* Tailwind's blue-400 for active link color */
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column; /* Stack the form and description on smaller screens */
