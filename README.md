@@ -11,3 +11,13 @@ Create a website for a real or imagined product, or anything else with a cohesiv
 Ethan Dam
 
 ## Attributions
+
+All Images used in this project are not owned by me and are for educational purposes only. Sources are porvided below for all of the Images:
+
+### KMS - Kriegsmarine Schiff
+
+1. https://www.flickr.com/photos/acstudio/33452794035 - KMS Admiral Graf Spee
+
+2. https://www.silverhawkauthor.com/post/warships-of-germany-kriegsmarine-warships-of-the-second-world-war - KMS Scharnhorst
+
+3. https://www.flickr.com/photos/coldwargallery/6169672204 - KMS Prinz Eugen

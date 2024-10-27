@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>World War 2 Navy Ship Gallery</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-gray-800 text-white p-4">
+      <nav
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex items-center mb-2 md:mb-0">
+          <img src="images/Union (1).png" alt="Mylogo" class="h-8 mr-2" />
+          <span class="text-white text-lg">FleetExhibit</span>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-button" class="text-white focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            Menu
+          </button>
+        </div>
+        <div
+          id="menu"
+          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 hidden md:flex"
+        >
+          <a class="hover:underline" href="index.html">Home</a>
+          <a class="hover:underline" href="#">Gallery</a>
+          <a class="hover:underline" href="#">Product</a>
+          <a class="hover:underline" href="blog_post.html">Blog Post</a>
+          <a class="active hover:underline" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center mt-2 md:mt-0">
+          <label for="search" class="sr-only">Search</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Search..."
+            class="p-2 text-black rounded-l-md border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+          />
+          <button
+            class="p-2 bg-blue-500 text-black rounded-r-md hover:bg-blue-600"
+          >
+            Search
+          </button>
+        </div>
+      </nav>
+
+      <script>
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+
+        menuButton.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+    </header>
+
+    <main>
+      <div class="contact-container flex">
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xrbgbvva"
+          method="POST"
+        >
+          <label for="first-name">First Name:</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first_name"
+            required
+            class="form-input"
+          />
+
+          <label for="last-name">Last Name:</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last_name"
+            required
+            class="form-input"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="form-input"
+          />
+
+          <label for="help">How can we help?</label>
+          <input type="text" id="help" name="help" class="form-input" />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="form-textarea"
+          ></textarea>
+
+          <button type="submit" class="form-button">Send</button>
+        </form>
+
+        <section class="contact-us">
+          <img src="images/450902-N-NO101-0175.jpeg" alt="" />
+          <h1 class="h2">Get in Touch with Us</h1>
+          <p class="description">
+            At The FleetExhibit, we are dedicated to showcasing the naval
+            vessels that played pivotal roles during World War II. Whether you
+            have questions about our collections, want to learn more about a
+            specific ship, or wish to share your insights, we encourage you to
+            reach out. Your inquiries and feedback help us preserve and promote
+            the rich history and legacy of these remarkable ships. Connect with
+            us today, and join us in honoring the contributions of naval forces
+            during this significant period in history!
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto flex justify-between">
+        <div class="w-1/2 mr-8">
+          <h2 class="text-lg font-bold">About Us</h2>
+          <p class="mt-2 text-sm">
+            FleetExhibit is an online platform dedicated to preserving the
+            history of World War II naval vessels. Featuring a gallery of
+            photographs and detailed descriptions, the site highlights the
+            significance of these ships and their roles in naval warfare.
+            Explore historical timelines, personal stories from veterans, and
+            informative articles that celebrate the design, construction, and
+            legacy of these iconic vessels, honoring those who served.
+          </p>
+        </div>
+        <div class="w-1/2 flex flex-col">
+          <div>
+            <h2 class="text-lg font-bold">Contact</h2>
+            <p class="mt-2">Email: info@FleetExhibit.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+          <div class="mt-4">
+            <h2 class="text-lg font-bold">Image Attribution</h2>
+            <p class="mt-2 text-sm">
+              All images used on this website are not owned by me and belong to
+              their respective owners. These images are utilized solely for
+              educational purposes to provide information about World War II
+              naval ships. I do not intend to make any profit from this website,
+              and if you are the owner of an image and would like it removed,
+              please contact me.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <h2 class="text-lg font-bold">Quick Links</h2>
+        <div class="flex justify-center space-x-4 mt-2">
+          <a href="index.html" class="text-sm hover:text-blue-400">Home</a>
+          <a href="#" class="text-sm hover:text-blue-400">Gallery</a>
+          <a href="#" class="text-sm hover:text-blue-400">Product</a>
+          <a href="blog_post.html" class="text-sm hover:text-blue-400"
+            >Blog Post</a
+          >
+          <a href="contact.html" class="text-sm hover:text-blue-400">Contact</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="text-sm">© 2024 FleetExhibit. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+.blog-post {
+  max-width: 800px; /* Set a max width for readability */
+  margin: 0 auto; /* Center the post */
+  padding: 20px; /* Add padding for spacing */
+  font-family: Arial, sans-serif; /* Choose a readable font */
+  line-height: 1.6; /* Improve line spacing */
+  color: #333; /* Text color */
+}
+
+.blog-title {
+  font-weight: bold;
+  font-size: 2.5em; /* Increase title size */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center; /* Center title */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.shokaku-image {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below image */
+}
+
+.introduction-container,
+.list-container {
+  margin: 20px 0; /* Vertical space for containers */
+}
+
+.introduction-container p,
+.list-container p {
+  font-size: 1.1em; /* Slightly increase font size */
+}
+
+.operational-history {
+  font-size: 1.8em; /* Size for subheadings */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 20px 0; /* Space above and below subheadings */
+  padding-bottom: 10px; /* Space below heading */
+}
+
+.key-factors {
+  font-size: 1.8em; /* Size for subheadings */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 20px 0; /* Space above and below subheadings */
+  padding-bottom: 10px; /* Space below heading */
+}
+
+ol {
+  margin-left: 20px; /* Indent ordered lists */
+}
+
+li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+p {
+  font-family: sans-serif;
+}
+
+.active {
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: underline; /* Adds underline for active link */
+  color: #60a5fa; /* Tailwind's blue-400 for active link color */
+}
+
+/* Mobile View */
+@media (max-width: 390px) {
+  .blog-title {
+    font-size: larger; /* Increase title size */
+  }
+
+  .introduction-container p,
+  .list-container p {
+    font-size: medium; /* Slightly increase font size */
+  }
+
+  .operational-history,
+  .key-factors {
+    font-size: larger; /* Size for subheadings */
+  }
+}
+
+/* Tablet View */
+@media (min-width: 391px) and (max-width: 768px) {
+  .blog-title {
+    font-size: 2.2em; /* Slightly decrease title size for tablets */
+  }
+
+  .introduction-container p,
+  .list-container p {
+    font-size: 1.2em; /* Slightly increase font size for better readability */
+  }
+
+  .operational-history,
+  .key-factors {
+    font-size: 1.6em; /* Adjust subheading size for tablets */
+  }
+}

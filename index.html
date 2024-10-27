@@ -1,56 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A brief overview of World War 2 Ships" />
-    <meta name="author" content="Ethan Dam" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="css/about.css" />
-    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="css/home-page.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <title>Maritime Memories: WWII Ships</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>World War 2 Navy Ship Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css" />
     <style>
-      table,
-      th,
-      td {
-        border: 1px solid black;
+      .active {
+        font-weight: bold; 
+        text-decoration: underline; 
+        color: #60a5fa; 
       }
     </style>
-  </head>
-
-  <body>
-    <header>
-      <h1>Maritime Memories: WWII Ships</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#more">More Section</a></li>
-        </ul>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-gray-800 text-white p-4">
+      <nav
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex items-center mb-2 md:mb-0">
+          <img src="images/Union (1).png" alt="Mylogo" class="h-8 mr-2" />
+          <span class="text-white text-lg">FleetExhibit</span>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-button" class="text-white focus:outline-none">
+            <!-- Hamburger Icon -->
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            Menu
+          </button>
+        </div>
+        <div
+          id="menu"
+          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 hidden md:flex"
+        >
+          <a class="active hover:underline" href="index.html">Home</a>
+          <a class="hover:underline" href="#gallery">Gallery</a>
+          <a class="hover:underline" href="#">Product</a>
+          <a class="hover:underline" href="blog_post.html">Blog Post</a>
+          <a class="hover:underline" href="contact.html">Contact</a>
+        </div>
+        <div class="flex items-center mt-2 md:mt-0">
+          <label for="search" class="sr-only">Search</label>
+          <input
+           type="text"
+           id="search"
+           placeholder="Search..."
+           class="p-2 text-black rounded-l-md border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+          />
+          <button
+            class="p-2 bg-blue-500 text-black rounded-r-md hover:bg-blue-600"
+          >
+            Search
+          </button>
+        </div>
       </nav>
-    </header>
-    <section class="content">
-      <h2 class="intro-title">Welcome to the World War 2 Navy Ship Museum</h2>
-      <p class="intro-paragraph">
-        Explore the rich history and legacy of naval warfare during World War 2
-        through our comprehensive resource dedicated to the era's remarkable
-        warships. From iconic aircraft carriers and powerful battleships to
-        agile destroyers and stealthy submarines, our site delves into the
-        design, technology, and stories behind these formidable vessels.
-        Discover detailed profiles of notable ships, in-depth analyses of
-        historic battles, and personal accounts from those who served. With
-        interactive features, timelines, and a wealth of resources, we invite
-        you to journey through the naval history that shaped the world. Join us
-        in honoring the courage and innovation of the men and women who sailed
-        these ships and contributed to a pivotal chapter in maritime history.
-      </p>
-    </section>
 
-    <main></main>
+      <script>
+        const menuButton = document.getElementById("menu-button");
+        const menu = document.getElementById("menu");
+
+        menuButton.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
+    </header>
+
+    <main>
+        <section class="my-14 text-black relative">
+            <div class="h-screen overflow-hidden">
+                <img src="images/iowa-class.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold text-blue-950 md:text-3xl lg:text-4xl">Welcome to FleetExhibit</h1>
+                    <p class="mt-4 text-sm md:text-base lg:text-lg font-bold text-blue-950">Discover the history of World War II naval vessels.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="my-12 flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="images/USS_Iowa_(BB-61)_Preps.jpg" alt="" class="w-full md:w-1/2 h-auto object-cover" />
+            <div class="p-4 w-full md:w-1/2">
+                <h2 class="text-base md:text-lg lg:text-xl font-bold">About Us</h2>
+                <p class="text-base md:text-lg lg:text-xl mt-2 text-gray-700">The FleetExhibit is a dedicated online resource showcasing the various naval vessels that played significant roles during World War II. Its primary purpose is to educate visitors about the history, design, and impact of these ships on naval warfare and the war's overall outcome. Overall, the World War 2 Navy Ship Gallery aims to preserve and promote the legacy of these ships, honoring the contributions of the naval forces during one of history's most significant conflicts.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="my-10 text-center text-4xl font-bold">FleetExhibit Gallery</h2>
+        </div>
+
+      <div
+        class="mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 px-10 pb-8 lg:grid-cols-3"
+        id="gallery"
+      >
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/Japanese_battleship_Haruna">
+            <img
+              src="images/IJN Haruna.jpeg"
+              class="rounded-t-lg w-full h-48 object-cover"
+              alt="Haruna"
+            />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-white">Haruna</h3>
+              <p class="text-white">
+                The IJN Haruna was a Japanese battleship launched in 1914, and
+                she was the last of the Kongō-class battleships. Originally
+                designed as a battlecruiser, Haruna underwent significant
+                upgrades throughout her career, including modernization during
+                the 1930s that enhanced her armament and armor.
+              </p>
+              <a
+                href="https://naval-encyclopedia.com/ww2/japan/kongo-class-fast-battleships.php"
+                class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+                >Learn More</a
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/Japanese_battleship_Yamato">
+          <img
+            src="images/IJN Yamato.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Yamato"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">Yamato</h3>
+            <p class="text-white">
+              The IJN Yamato was the lead ship of the Yamato class of
+              battleships in the Imperial Japanese Navy, launched in 1940.
+              Renowned for being one of the largest and most heavily armed
+              battleships ever built, Yamato was equipped with nine 18.1-inch
+              guns and heavily armored to withstand significant naval
+              engagements.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/japan/yamato.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/Japanese_battleship_Nagato">
+          <img
+            src="images/IJN Nagato.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Nagato"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">Nagato</h3>
+            <p class="text-white">
+              The IJN Nagato was a Japanese battleship launched in 1919 and the
+              lead ship of her class in the Imperial Japanese Navy. As one of
+              the first battleships designed with a focus on high firepower and
+              speed, Nagato was armed with eight 16-inch guns and featured
+              innovative design elements for her time.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/japan/nagato-class-battleships.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/USS_Alabama_(BB-60)">
+          <img
+            src="images/USS Alabama.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Haruna"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">USS Alabama</h3>
+            <p class="text-white">
+              The USS Alabama (BB-60) is a South Dakota-class battleship of the
+              United States Navy, launched in 1942. Renowned for her heavy armor
+              and firepower, Alabama was equipped with nine 16-inch guns and
+              played a vital role in World War II.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/us/south-dakota-class-battleships.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/USS_Iowa_(BB-61)">
+          <img
+            src="images/USS IOwa.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Yamato"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">USS Iowa</h3>
+            <p class="text-white">
+              The USS Iowa (BB-61) is an Iowa-class battleship of the United
+              States Navy, launched in 1942. Known for her speed and formidable
+              armament, Iowa featured nine 16-inch guns and a top speed of
+              around 33 knots. She was also the known as the "The Big Stick".
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/us/iowa-class-battleships.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/USS_New_Jersey_(BB-62)">
+          <img
+            src="images/USS New Jersey.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Nagato"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">USS New Jersey</h3>
+            <p class="text-white">
+              The USS New Jersey (BB-62) is an Iowa-class battleship of the
+              United States Navy, launched in 1942. Known for her impressive
+              size and firepower, she was one of the largest battleships ever
+              built, equipped with nine 16-inch guns and capable of reaching
+              speeds up to 33 knots.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/us/iowa-class-battleships.php#newjersey"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/German_cruiser_Prinz_Eugen">
+          <img
+            src="images/KMS Prinz Eugen.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Prinz Eugen"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">KMS Prinz Eugen</h3>
+            <p class="text-white">
+              The Prinz Eugen was a German heavy cruiser launched in 1938, named
+              after a famous 18th-century general. She was part of the Admiral
+              Hipper class and featured advanced design and armament, including
+              eight 8-inch guns. Prinz Eugen played a significant role in World
+              War II, participating in the invasion of Denmark and Norway and
+              later in the Atlantic, where she served alongside the battleship
+              Bismarck.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/germany/hipper-class-cruisers.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/German_cruiser_Admiral_Graf_Spee">
+          <img
+            src="images/KMS Admiral Gra Spee.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Admiral Graf Spee"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">
+              KMS Admiral Graf Spee
+            </h3>
+            <p class="text-white">
+              The Admiral Graf Spee was a German pocket battleship launched in
+              1934. Named after Admiral Maximilian von Spee, she played a
+              prominent role in the early stages of World War II. Graf Spee was
+              notable for her heavy armament and high speed, which allowed her
+              to operate effectively as a commerce raider in the South Atlantic.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/germany/deutschland-class-cruisers.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-cyan-900 rounded-lg shadow-md mb-4">
+          <a href="https://en.wikipedia.org/wiki/German_battleship_Scharnhorst">
+          <img
+            src="images/66a39a0be87e74f5084a762e_60f6d7bbd72344718731986b_Gneisenau--Kriegsmarine-Battlecruiser--11-.jpeg"
+            class="rounded-t-lg w-full h-48 object-cover"
+            alt="Scharnhorst"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">KMS Scharnhorst</h3>
+            <p class="text-white">
+              The Scharnhorst was a German battleship launched in 1936 and named
+              after the Prussian general Gerhard von Scharnhorst. As part of the
+              Scharnhorst-class battleships, she was notable for her fast speed,
+              powerful armament, and innovative design.
+            </p>
+            <a
+              href="https://naval-encyclopedia.com/ww2/germany/scharnhorst-class-battleships.php"
+              class="mt-2 inline-block bg-blue-500 text-black py-2 px-4 rounded hover:bg-blue-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto flex justify-between">
+          <div class="w-1/2 mr-8">
+              <h2 class="text-lg font-bold">About Us</h2>
+              <p class="mt-2 text-sm">
+                  FleetExhibit is an online platform dedicated to preserving the history of World War II naval vessels. Featuring a gallery of photographs and detailed descriptions, the site highlights the significance of these ships and their roles in naval warfare. Explore historical timelines, personal stories from veterans, and informative articles that celebrate the design, construction, and legacy of these iconic vessels, honoring those who served.
+              </p>
+          </div>
+          <div class="w-1/2 flex flex-col">
+              <div>
+                  <h2 class="text-lg font-bold">Contact</h2>
+                  <p class="mt-2">Email: info@FleetExhibit.com</p>
+                  <p>Phone: (123) 456-7890</p>
+              </div>
+              <div class="mt-4">
+                  <h2 class="text-lg font-bold">Image Attribution</h2>
+                  <p class="mt-2 text-sm">
+                      All images used on this website are not owned by me and belong to their respective owners. These images are utilized solely for educational purposes to provide information about World War II naval ships. I do not intend to make any profit from this website, and if you are the owner of an image and would like it removed, please contact me.
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="mt-6 text-center">
+          <h2 class="text-lg font-bold">Quick Links</h2>
+          <div class="flex justify-center space-x-4 mt-2">
+              <a href="index.html" class="text-sm hover:text-blue-400">Home</a>
+              <a href="#" class="text-sm hover:text-blue-400">Gallery</a>
+              <a href="#" class="text-sm hover:text-blue-400">Product</a>
+              <a href="blog_post.html" class="text-sm hover:text-blue-400">Blog Post</a>
+              <a href="contact.html" class="text-sm hover:text-blue-400">Contact</a>
+          </div>
+      </div>
+  
+      <div class="text-center mt-4">
+          <p class="text-sm">© 2024 FleetExhibit. All rights reserved.</p>
+      </div>
+  </footer>
+  
+  
+
+    <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>
